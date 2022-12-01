@@ -12,7 +12,6 @@
 		607634DA292EB2D900B8D4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607634D9292EB2D900B8D4DF /* Assets.xcassets */; };
 		607634DD292EB2D900B8D4DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607634DC292EB2D900B8D4DF /* Preview Assets.xcassets */; };
 		609F1F9D293816EC0097E5CA /* MenuCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F1F9C293816EC0097E5CA /* MenuCards.swift */; };
-		E57FE76E2933F975007AE231 /* NetworkMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57FE76D2933F975007AE231 /* NetworkMenager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		607634D9292EB2D900B8D4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		607634DC292EB2D900B8D4DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		609F1F9C293816EC0097E5CA /* MenuCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCards.swift; sourceTree = "<group>"; };
-		E57FE76D2933F975007AE231 /* NetworkMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMenager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 				609F1F9C293816EC0097E5CA /* MenuCards.swift */,
 				607634D9292EB2D900B8D4DF /* Assets.xcassets */,
 				607634DB292EB2D900B8D4DF /* Preview Content */,
-				E57FE76D2933F975007AE231 /* NetworkMenager.swift */,
 			);
 			path = TheBindingOfIssac;
 			sourceTree = "<group>";
@@ -144,7 +141,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				609F1F9D293816EC0097E5CA /* MenuCards.swift in Sources */,
-				E57FE76E2933F975007AE231 /* NetworkMenager.swift in Sources */,
 				607634D8292EB2D400B8D4DF /* ContentView.swift in Sources */,
 				607634D6292EB2D400B8D4DF /* TheBindingOfIssacApp.swift in Sources */,
 			);
