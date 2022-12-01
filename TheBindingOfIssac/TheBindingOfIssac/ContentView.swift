@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     let menuCards = MenuCards()
+    
     var body: some View {
         NavigationView{
             
@@ -31,7 +33,7 @@ struct ContentView: View {
                         
                         
                         NavigationLink{
-                            Text("something")
+                            Text("there will be something")
                         } label: {
                             Text(card)
                                 .font(.system(size: 36, weight: .semibold))
