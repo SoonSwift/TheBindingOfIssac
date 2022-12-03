@@ -9,6 +9,9 @@ import Foundation
 
 class HomeViewModel{
     
+    
+    
+    
     private let cards: [CategoryCard] = [
     CategoryCard(imageName: "Character Card", text: "Character Card"),
     CategoryCard(imageName: "Loot Card", text: "Loot Card"),
@@ -17,6 +20,9 @@ class HomeViewModel{
     CategoryCard(imageName: "Bonus Soul", text: "Bonus Soul")
     ]
     
+    private let menuImage = "FourSoulsLogo"
+    
+    
     
     init (){
         
@@ -24,6 +30,10 @@ class HomeViewModel{
     
     func getCards() -> [CategoryCard]{
         return cards
+    }
+    
+    func getMenuImage() -> String{
+        return menuImage
     }
     
 }

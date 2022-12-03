@@ -21,7 +21,7 @@ struct HomeView: View {
                     .foregroundColor(.gray)
                     .padding(.vertical)
                 
-                Image("FourSoulsLogo")
+                Image(viewModel.getMenuImage())
                     .resizable()
                     .scaledToFit()
                 ForEach(viewModel.getCards(), id: \.imageName){ card in
