@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     
-    let menuCards = MenuCards()
+    let viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView{
@@ -21,12 +21,12 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                     .padding(.vertical)
                 
-                Image("FourSoulsLogo")
+                Image(viewModel.getMenuImage())
                     .resizable()
                     .scaledToFit()
-                ForEach(menuCards.cards, id: \.self){ card in
+                ForEach(viewModel.getCards(), id: \.imageName){ card in
                     HStack{
-                        Image("\(card)")
+                        Image("\(card.imageName)")
                             .resizable()
                             .frame(width: 70, height: 96)
                             .padding(.horizontal, 16)
@@ -35,7 +35,7 @@ struct ContentView: View {
                         NavigationLink{
                             Text("there will be something")
                         } label: {
-                            Text(card)
+                            Text(card.text)
                                 .font(.system(size: 36, weight: .semibold))
                                 .foregroundColor(.white)
                             
@@ -69,8 +69,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
