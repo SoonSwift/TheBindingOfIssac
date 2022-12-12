@@ -10,4 +10,10 @@ import Foundation
 struct CategoryCard{
     let imageName: String
     let text: String
+    let type: CardType
+    
+}
+
+enum CardType{
+    case Character,Monster,Bonus,Loot,Treasure
 }
