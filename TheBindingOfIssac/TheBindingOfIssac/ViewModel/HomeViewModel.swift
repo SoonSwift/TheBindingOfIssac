@@ -7,17 +7,18 @@
 
 import Foundation
 
-class HomeViewModel{
+class HomeViewModel: ObservableObject{
     
-    
-    
+   
+    @Published var showMenu = false
+
     
     private let cards: [CategoryCard] = [
-    CategoryCard(imageName: "Character Card", text: "Character Card"),
-    CategoryCard(imageName: "Loot Card", text: "Loot Card"),
-    CategoryCard(imageName: "Monster Card", text: "Monster Card"),
-    CategoryCard(imageName: "Treasure Card", text: "Treasure Card"),
-    CategoryCard(imageName: "Bonus Soul", text: "Bonus Soul")
+        CategoryCard(imageName: "Character Card", text: "Character Card",type: .Character),
+        CategoryCard(imageName: "Loot Card", text: "Loot Card", type: .Loot),
+        CategoryCard(imageName: "Monster Card", text: "Monster Card", type: .Monster),
+        CategoryCard(imageName: "Treasure Card", text: "Treasure Card", type: .Treasure),
+        CategoryCard(imageName: "Bonus Soul", text: "Bonus Soul", type: .Bonus)
     ]
     
     private let menuImage = "FourSoulsLogo"
