@@ -6,7 +6,26 @@
 //
 
 import Foundation
+import SwiftUI
 
-class ListViewModel{
+class ListCardViewModel{
+    
+    var cards: [Cards] = Bundle.main.decode("JSON_data.json")
+
+    
+    let colums = [
+        GridItem(.adaptive(minimum: 150))
+    
+    ]
+
+    
+
+
+
+    init() {
+       
+    }
+
+    
     
 }

@@ -26,12 +26,18 @@ struct SideMenuView: View {
                 .padding(.top, 20)
                 
                 HStack{
-                    Text("Game rules")
+                    NavigationLink(){
+                        GameRulesView()
+                    } label: {
+                        
+                        
+                        Text("Game rules")
                         .foregroundColor(.white)
                         .font(.headline)
-                    Image("Issac")
-                        .resizable()
-                        .frame(width: 40, height: 40)
+                        Image("Issac")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                    }
                 }
                 .padding(.top, 20)
                 
