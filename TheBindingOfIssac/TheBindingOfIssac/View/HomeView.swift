@@ -38,7 +38,15 @@ struct HomeView: View {
                                 NavigationLink(){
                                     switch card.text {
                                     case "Character Card":
-                                        ListCardView()
+                                        ListCardView(type: "Character")
+                                    case "Loot Card":
+                                        ListCardView(type: "LootCrad")
+                                    case "Monster Card":
+                                        ListCardView(type: "MonsterCard")
+                                    case "Treasure Card":
+                                        ListCardView(type: "Treasure")
+                                    case "Bonus Soul":
+                                        ListCardView(type: "BonusSoul")
                                     default:
                                         HomeView()
                                         
@@ -100,10 +108,11 @@ struct HomeView: View {
                     
                 }
                 
-                .toolbarBackground(Color(red: 0.1, green: 0.1, blue: 0.2), for: .navigationBar)
-                
+                .toolbarBackground(.darkBackground, for: .navigationBar)
+                .preferredColorScheme(.dark)
+
        
-            .background(Color(red: 0.1, green: 0.1, blue: 0.2))
+                .background(.darkBackground)
         }
         
     }
