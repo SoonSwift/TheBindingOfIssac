@@ -8,24 +8,30 @@
 import Foundation
 import SwiftUI
 
-class ListCardViewModel{
-    
-    var cards: [Cards] = Bundle.main.decode("JSON_data.json")
+extension ListCardView{
+  @MainActor  class ListCardViewModel:ObservableObject {
+        
+        var cards: [Cards]
+      
+      @Published var searchText = ""
 
-    
-    let colums = [
-        GridItem(.adaptive(minimum: 150))
-    
-    ]
+      @Published  var  isLoading = true
+        let colums = [
+            GridItem(.adaptive(minimum: 150))
+            
+        ]
+        
+      
+      @Published  var selectedImage: ImageWrapper? = nil
 
-    
+      @Published var images = [URL: UIImage]()
 
-
-
-    init() {
-       
+        
+        init() {
+            cards =  Bundle.main.decode("JSON_data.json")
+            
+        }
+        
+        
     }
-
-    
-    
 }
