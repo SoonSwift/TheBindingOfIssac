@@ -25,34 +25,26 @@ struct ListCardView: View {
                 .padding(.horizontal)
                 .cornerRadius(8)
             LazyVGrid(columns: colums) {
-                if viewModel.isLoading {
-                    Text("Loading...")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                    ProgressView()
-                } else {
-                    ForEach(viewModel.cards, id: \.self) { card in
-                        if let image = card.image {
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFit()
-                                .onTapGesture {
-                                    viewModel.selectedImage = ImageWrapper(image: image)
-                                }
-                                .sheet(item: $viewModel.selectedImage) { imageWrapper in
-                                    Image(uiImage: imageWrapper.image)
-                                        .resizable()
-                                        .scaledToFit()
-                                }
-                        } else {
-                            Text("ERROR")
-                        }
+                ForEach(viewModel.cards, id: \.self) { card in
+                    AsyncImage(url: card.link) { image in
+                        image.resizable()
+                            .scaledToFit()
+                            .onTapGesture {
+                                viewModel.selectedImage = ImageWrapper(image: image)
+                            }
+                            .sheet(item: $viewModel.selectedImage) { imageWrapper in
+                                imageWrapper.image
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                    } placeholder: {
+                        ProgressView()
                     }
                 }
             }
         }
         .onAppear {
-            viewModel.fetchCards()
+            viewModel.reloadData()
         }
         .navigationTitle(viewModel.type.rawValue)
         .navigationBarTitleDisplayMode(.inline)

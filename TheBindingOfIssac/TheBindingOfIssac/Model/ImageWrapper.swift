@@ -10,5 +10,5 @@ import SwiftUI
 
 struct ImageWrapper: Identifiable {
     let id = UUID()
-    let image: UIImage
+    let image: Image
 }

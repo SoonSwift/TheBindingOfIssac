@@ -12,10 +12,3 @@ struct Cards: Codable, Hashable {
     let cardType: CardType
     let link: URL
 }
-
-import SwiftUI
-
-struct CardViewModel: Hashable {
-    let name: String
-    let image: UIImage?
-}
