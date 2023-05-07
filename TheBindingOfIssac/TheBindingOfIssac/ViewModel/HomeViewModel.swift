@@ -11,7 +11,6 @@ class HomeViewModel: ObservableObject{
     
    
     @Published var showMenu = false
-
     
     private let cards: [CategoryCard] = [
         CategoryCard(imageName: "Character Card", text: "Character Card",type: .Character),
