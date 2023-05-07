@@ -5,15 +5,17 @@
 //  Created by Marcin Dytko on 01/12/2022.
 //
 
-import Foundation
-
-struct CategoryCard{
+struct CategoryCard {
     let imageName: String
     let text: String
     let type: CardType
-    
 }
 
-enum CardType{
-    case Character,Monster,Bonus,Loot,Treasure
+enum CardType: String, Hashable, Codable {
+    case character = "Character"
+    case monster = "MonsterCard"
+    case bonus = "BonusSoul"
+    case loot = "LootCrad"
+    case treasure = "Treasure"
+    case startingItem = "StartingIteam"
 }

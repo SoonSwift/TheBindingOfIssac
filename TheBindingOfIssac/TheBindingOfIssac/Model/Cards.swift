@@ -8,9 +8,14 @@
 import Foundation
 
 struct Cards: Codable, Hashable {
-    
     let name: String
-    let cardType: String
+    let cardType: CardType
     let link: URL
-    
+}
+
+import SwiftUI
+
+struct CardViewModel: Hashable {
+    let name: String
+    let image: UIImage?
 }
